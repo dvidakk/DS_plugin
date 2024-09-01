@@ -135,7 +135,7 @@ class DomaceSerijeNetProvider(val plugin: DomaceSerijeNetPlugin) : MainAPI() { /
         val pageContent = getPage(mainUrl, headers)
         val document = Jsoup.parse(pageContent)
     
-        // Parse the latest episodes
+        // Parse the latest episodesss
         val episodes = document.select(".eps .epizodenove").map { parseEpisode(it) }
         val homePageList = HomePageList("Poslednje Epizode", episodes.map { episode ->
             object : SearchResponse {
