@@ -11,7 +11,6 @@ buildscript {
 
     dependencies {
         classpath("com.android.tools.build:gradle:7.0.4")
-        // Cloudstream gradle plugin which makes everything work and builds plugins
         classpath("com.github.recloudstream:gradle:-SNAPSHOT")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.21")
     }
@@ -78,6 +77,8 @@ subprojects {
         implementation("org.jsoup:jsoup:1.16.2") // html parser
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.16.0")
         implementation("com.fasterxml.jackson.core:jackson-databind:2.16.0")
+        implementation("androidx.appcompat:appcompat:1.3.1") // Add this for AppCompatActivity
+        implementation("androidx.core:core-ktx:1.6.0") 
     }
 }
 
